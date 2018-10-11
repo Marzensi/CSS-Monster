@@ -14,112 +14,342 @@ body{
 .container{
   position:relative;
   border:4px solid red;
-  width:800px;
-  height:620px;
+  width:900px;
+  height:900px;
+}
+
+.ear-left,
+.ear-right{
+  position:absolute;
+  width:50%;
+  height: 45%;
+  top:25%;
+}
+
+.ear-left{
+  left:-50%;
+}
+
+.ear-right{
+  right:-50%;
+}
+
+.ear-left-square-one,
+.ear-right-square-one{
+  position:absolute;
+  height:100%;
+  width:25%;
+  right:0;
+  border-radius:10%;
+  background-color:gray;
+}
+.ear-left-square-two,
+.ear-right-square-two{
+  position:absolute;
+  height:80%;
+  width:25%;
+  top:10%;
+  right:25%;
+  background-color: lightgray;
+  border-radius:10px;
+}
+
+.ear-left-square-three,
+.ear-right-square-three{
+  position:absolute;
+  height:14%;
+  width:20%;
+  right:50%;
+  top:43%;
+  background-color: lightgray;
+}
+.ear-left-circle,
+.ear-right-circle{
+  position:absolute;
+  height:50%;
+  width:30%;
+  right:68%;
+  top:25%;
+  background-color:lightgray;
+  border-radius:50%;
+}
+
+.ear-right-square-one {
+  right:unset;
+  left: 0;
+}
+
+.ear-right-square-two{
+  right:unset;
+  left:25%;
+}
+
+.ear-right-square-three{
+  right:unset;
+  left:50%;
+}
+
+.ear-right-circle{
+  right:unset;
+  left:68%;
+}
+
+
+.body,
+.head{
+  position:absolute;
+  background: radial-gradient(lightgray, gray);
+  border-radius: 5%;
+}
+
+.head{
+  top:14%;
+  left:30%;
+  height:27%;
+  width:40%;
+
 }
 
 .body{
-  position:absolute;
-  top:10%;
-  left:25%;
-  height:80%;
-  width:50%;
-  background: linear-gradient(deeppink, pink);
-  border-radius: 50% 50% 40% 40%;
+  top:45%;
+  left:33%;
+  height:27%;
+  width:34%;
 }
-
-//.eyebrows{
-//  width:35%;
-//  height:50px;
-//  position:relative;
-//
-//}
-
-.left-eyebrow,
-.right-eyebrow{
-  position:absolute;
-  top:10%;
-  height:5%;
-  width:15%;
-  border-top: 50px solid transparent;
-
-}
-
-.left-eyebrow{
-  left:20%;
-  border-left: 100px solid black;
-  transform:rotate(15deg);
-}
-
-.right-eyebrow{
-  right:20%;
-  border-right: 100px solid black;
-  transform:rotate(-15deg);
-}
-//
-//.eyes{
-//
-//  display:flex;
-//  justify-content: space-between;
-//  padding-top:25px;
-//}
 
 .left-eye,
-.right-eye{
+.right-eye,
+.pupil-one-left,
+.pupil-two-left,
+.sparkle-pupil-left,
+.left-iris,
+.pupil-one-right,
+.pupil-two-right,
+.sparkle-pupil-right,
+.right-iris{
   position:absolute;
-  height: 25%;
-  width:25%;
-  background-color: white;
-  border-radius: 50%;
-  border: 1px solid gray;
-  overflow: hidden;
-
+  border-radius: 100%;
+  overflow:hidden;
 }
 
 .left-eye{
-  top:25%;
-  left:20%;
+  height: 60%;
+  width:50%;
+  top:5%;
+  right:47%;
+  background-color: #eee;
 }
 
 .right-eye{
-  top:25%;
+  height: 50%;
+  width:45%;
+  top:11%;
+  left:53%;
+  background-color: #eee;
+}
+
+.pupil-one-left,
+.pupil-one-right{
+  height: 100%;
+  width: 83%;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+.pupil-two-left,
+.pupil-two-right{
+  height: 76%;
+  width: 80%;
+  top: 15%;
+  right: 4px;
+  background-color: lightskyblue;
+}
+.sparkle-pupil-left,
+.sparkle-pupil-right{
+  height: 35%;
+  width: 35%;
+  top: 0;
+  left: 4%;
+  background-color: #fff;
+}
+.left-iris,
+.right-iris{
+  height: 70%;
+  width: 70%;
+  top: 24%;
+  left: 29%;
+  background: radial-gradient(black, midnightblue );
+}
+
+.pupil-one-right{
+  left: 0;
+}
+.pupil-two-right{
+  left: 4px;
+}
+.sparkle-pupil-right{
+  left:unset;
+  right: 4%;
+}
+.right-iris{
+  left: unset;
+  right: 29%;
+}
+
+.mouth{
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  border-bottom: 7px solid black;
+  border-radius: 61%;
+  bottom: 6%;
+  left: 25%;
+  transform: rotate(9deg);
+}
+
+.neck{
+  position:absolute;
+  height:4%;
+  width:10%;
+  top:41%;
+  left: 45%;
+  background-color:lightgray;
+}
+
+.heart{
+  position:absolute;
+  height: 50%;
+  width:33%;
+  top:10%;
+  right: 16%;
+  transform:rotate(7deg);
+}
+
+.left-top,
+.right-top{
+  position:absolute;
+  background-color: crimson;
+  height:50%;
+  width:40%;
+  border-radius: 50%;
+  top: 10%;
+
+}
+
+.left-top{
+  left:10%;
+
+}
+.right-top{
+  right:10%;
+}
+.middle-bottom{
+  position: absolute;
+  background-color: crimson;
+  height: 37%;
+  width: 48%;
+  transform: rotate(45deg);
+  bottom: 27%;
+  left: 25%;
+}
+
+.sparkle-heart{
+  position: absolute;
+  background-color: white;
+  width: 20%;
+  height: 27%;
+  left: 18%;
+  top: 17%;
+  border-radius: 50%;
+  transform: rotate(-6deg);
+}
+
+.screw-one,
+.screw-two,
+.screw-three,
+.screw-four{
+  position:absolute;
+  background-image: url("http://features.acumed.net/eps-tool/img/hex/screw-head.png");
+  background-position:center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:15%;
+  width:15%;
+}
+
+.screw-one{
+  top:5%;
+  left:5%;
+}
+.screw-two{
+  bottom:5%;
+  left:5%;
+}
+.screw-three{
+  top:5%;
+  right:5%;
+}
+.screw-four{
+  bottom:5%;
+  right:5%;
+}
+
+.leg-left-container,
+.leg-right-container{
+  position:absolute;
+  width: 17%;
+  height: 28%;
+  top:72%;
+}
+
+.leg-left-container{
+  left:33%;
+}
+.leg-left,
+.leg-right{
+  position:absolute;
+  background-color:lightgray;
+  height:90%;
+  width:60%;
+}
+
+.leg-left{
+  left:20%;
+}
+.ring-one,
+.ring-two,
+.ring-three,
+.ring-four{
+  position:absolute;
+  background-color:gray;
+  width:140%;
+  height:15%;
+  top:10%;
+  left:-20%;
+}
+.ring-two{
+  top:35%;
+}
+.ring-three{
+  top:60%;
+}
+.ring-four{
+  top:85%;
+}
+.foot-left,
+.foot-right{
+  position:absolute;
+  background-color: lightgray;
+  height:15%;
+  width:100%;
+  bottom:0;
+  border-radius: 50% 50% 0 0;
+}
+
+.leg-right-container{
+  right:33%;
+}
+.leg-right{
   right:20%;
 }
-
-//.left-eye::before,
-//.right-eye::before{
-//  height: 200px;
-//  width:150px;
-//  background-color: deeppink;
-//}
-//
-//.right-eye::before{
-//
-//}
-
-.left-iris,
-.right-iris {
-  position: absolute;
-  background-color: black;
-  width: 100%;
-  height: 75%;
-  border-radius: 50% 50% 0 0 ;
-  bottom:0;
-  left:0;
-
-}
-
-.left-iris{
-}
-
-.right-iris{
-
-}
-
-.nose{
-
-}
-
-
-
-
+.foot-right{}
