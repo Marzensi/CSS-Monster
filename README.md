@@ -1,4 +1,4 @@
-# CSS-Monster
+# CSS-Robot
 
 An easy animated robot. 
 
