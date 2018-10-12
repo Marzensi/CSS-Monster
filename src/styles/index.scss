@@ -13,10 +13,58 @@ body{
 
 .container{
   position:relative;
-  border:4px solid red;
   width:900px;
   height:900px;
 }
+
+/*-------------ANTENNALS---------------*/
+
+.antennal{
+  position:absolute;
+  height:14%;
+  width:23%;
+  left: 38%;
+}
+
+.antennal-left,
+.antennal-right{
+  position:absolute;
+  background-color:lightgray;
+  width: 10%;
+  bottom:-30%;
+}
+
+.antennal-left{
+  height: 100%;
+  transform: rotate(-50deg);
+  left: 20%;
+}
+.antennal-right{
+  height: 90%;
+  transform: rotate(30deg);
+  right:30%
+}
+
+.antennal-left-circle,
+.antennal-right-circle{
+  position: absolute;
+  height: 45%;
+  width: 30%;
+  border-radius: 50%;
+  background:radial-gradient(lightgray, gray);
+}
+.antennal-left-circle{
+  top:20%;
+  left:-14%;
+}
+.antennal-right-circle{
+  top:12%;
+  right:4%;
+}
+
+
+
+/*-------------EARS---------------*/
 
 .ear-left,
 .ear-right{
@@ -41,8 +89,9 @@ body{
   width:25%;
   right:0;
   border-radius:10%;
-  background-color:gray;
+  background: radial-gradient(lightgray, gray);
 }
+
 .ear-left-square-two,
 .ear-right-square-two{
   position:absolute;
@@ -63,6 +112,7 @@ body{
   top:43%;
   background-color: lightgray;
 }
+
 .ear-left-circle,
 .ear-right-circle{
   position:absolute;
@@ -94,6 +144,7 @@ body{
   left:68%;
 }
 
+/*-------------BODY & HEAD---------------*/
 
 .body,
 .head{
@@ -107,7 +158,6 @@ body{
   left:30%;
   height:27%;
   width:40%;
-
 }
 
 .body{
@@ -116,6 +166,35 @@ body{
   height:27%;
   width:34%;
 }
+
+.screw-one,
+.screw-two,
+.screw-three,
+.screw-four{
+  position:absolute;
+  background: url("http://features.acumed.net/eps-tool/img/hex/screw-head.png") center/contain no-repeat;
+  height:15%;
+  width:15%;
+}
+
+.screw-one{
+  top:5%;
+  left:5%;
+}
+.screw-two{
+  bottom:5%;
+  left:5%;
+}
+.screw-three{
+  top:5%;
+  right:5%;
+}
+.screw-four{
+  bottom:5%;
+  right:5%;
+}
+
+/*-------------EYES---------------*/
 
 .left-eye,
 .right-eye,
@@ -156,6 +235,7 @@ body{
   right: 0;
   background-color: #fff;
 }
+
 .pupil-two-left,
 .pupil-two-right{
   height: 76%;
@@ -164,6 +244,7 @@ body{
   right: 4px;
   background-color: lightskyblue;
 }
+
 .sparkle-pupil-left,
 .sparkle-pupil-right{
   height: 35%;
@@ -172,6 +253,7 @@ body{
   left: 4%;
   background-color: #fff;
 }
+
 .left-iris,
 .right-iris{
   height: 70%;
@@ -184,17 +266,22 @@ body{
 .pupil-one-right{
   left: 0;
 }
+
 .pupil-two-right{
   left: 4px;
 }
+
 .sparkle-pupil-right{
   left:unset;
   right: 4%;
 }
+
 .right-iris{
   left: unset;
   right: 29%;
 }
+
+/*--------------MOUTH--------------*/
 
 .mouth{
   position: absolute;
@@ -207,6 +294,8 @@ body{
   transform: rotate(9deg);
 }
 
+/*--------------NECK--------------*/
+
 .neck{
   position:absolute;
   height:4%;
@@ -215,6 +304,8 @@ body{
   left: 45%;
   background-color:lightgray;
 }
+
+/*-------------HEART---------------*/
 
 .heart{
   position:absolute;
@@ -228,24 +319,25 @@ body{
 .left-top,
 .right-top{
   position:absolute;
-  background-color: crimson;
+  background-color:crimson;
   height:50%;
   width:40%;
   border-radius: 50%;
   top: 10%;
-
 }
 
 .left-top{
   left:10%;
 
 }
+
 .right-top{
   right:10%;
 }
+
 .middle-bottom{
   position: absolute;
-  background-color: crimson;
+  background-color:crimson;
   height: 37%;
   width: 48%;
   transform: rotate(45deg);
@@ -264,35 +356,131 @@ body{
   transform: rotate(-6deg);
 }
 
-.screw-one,
-.screw-two,
-.screw-three,
-.screw-four{
+/*-------------ARMS---------------*/
+
+.arm-left-container,
+.arm-right-container{
   position:absolute;
-  background-image: url("http://features.acumed.net/eps-tool/img/hex/screw-head.png");
-  background-position:center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height:15%;
-  width:15%;
+  width: 28%;
+  height:17%;
+  top:46%;
 }
 
-.screw-one{
-  top:5%;
+.arm-left-container{
   left:5%;
 }
-.screw-two{
-  bottom:5%;
-  left:5%;
-}
-.screw-three{
-  top:5%;
+
+.arm-right-container{
   right:5%;
 }
-.screw-four{
-  bottom:5%;
-  right:5%;
+
+.arm-left,
+.arm-right{
+  position:absolute;
+  background-color:lightgray;
+  width:90%;
+  height:60%;
+  top:20%;
 }
+
+.arm-left{
+  right:0;
+
+}
+.arm-right{
+  left:0;
+}
+
+.arm-ring-one,
+.arm-ring-two,
+.arm-ring-three,
+.arm-ring-four{
+  position:absolute;
+  background: radial-gradient(lightgray, gray);
+  height:140%;
+  width:15%;
+  top: -20%;
+  border-radius: 10%;
+}
+
+.arm-right .arm-ring-one{
+   left:10%;
+ }
+.arm-right .arm-ring-two{
+  left:35%;
+}
+.arm-right .arm-ring-three{
+  left: 60%;
+}
+.arm-right .arm-ring-four{
+  left:85%;
+  z-index:1;
+}
+
+.arm-left .arm-ring-one{
+  right:10%;
+}
+
+.arm-left .arm-ring-two{
+  right:35%;
+}
+
+.arm-left .arm-ring-three{
+  right: 60%;
+}
+
+.arm-left .arm-ring-four{
+  right:85%;
+  z-index:1;
+}
+
+.hand-left,
+.hand-right{
+  position:absolute;
+  width:40%;
+  height: 150%;
+  top: -25%;
+}
+
+.hand-left{
+  left:-33%;
+}
+
+.hand-right{
+  right:-33%;
+}
+
+.finger-left,
+.finger-right{
+  position:absolute;
+  height: 75%;
+  width:100%;
+  border-radius:50%;
+}
+
+.hand-left .finger-left{
+  border-top: 30px solid darkgray;
+  transform:rotate(30deg);
+  top:5px;
+}
+.hand-left .finger-right{
+  border-bottom: 30px solid darkgray;
+  transform:rotate(-30deg);
+  bottom:5px;
+}
+
+.hand-right .finger-left{
+  border-top: 30px solid darkgray;
+  transform:rotate(-30deg);
+  top:5px;
+}
+.hand-right .finger-right{
+  border-bottom: 30px solid darkgray;
+  transform:rotate(30deg);
+  bottom:5px;
+}
+
+/*-------------LEGS---------------*/
 
 .leg-left-container,
 .leg-right-container{
@@ -305,6 +493,7 @@ body{
 .leg-left-container{
   left:33%;
 }
+
 .leg-left,
 .leg-right{
   position:absolute;
@@ -316,30 +505,40 @@ body{
 .leg-left{
   left:20%;
 }
+
+.leg-right{
+  right:20%;
+}
+
 .ring-one,
 .ring-two,
 .ring-three,
 .ring-four{
   position:absolute;
-  background-color:gray;
+  background: radial-gradient(lightgray, gray);
   width:140%;
   height:15%;
   top:10%;
   left:-20%;
+  border-radius: 10%;
 }
+
 .ring-two{
   top:35%;
 }
+
 .ring-three{
   top:60%;
 }
+
 .ring-four{
   top:85%;
 }
+
 .foot-left,
 .foot-right{
   position:absolute;
-  background-color: lightgray;
+  background: radial-gradient(lightgray, darkgray);
   height:15%;
   width:100%;
   bottom:0;
@@ -349,7 +548,3 @@ body{
 .leg-right-container{
   right:33%;
 }
-.leg-right{
-  right:20%;
-}
-.foot-right{}
