@@ -76,10 +76,30 @@ body{
 
 .ear-left{
   left:-50%;
+  animation-name:move-your-left-ear;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-your-left-ear{
+  0%{width:50%; left:-50%;}
+  50%{width:47%; left:-47%;}
+  100%{width:50%; left:-50%;}
 }
 
 .ear-right{
   right:-50%;
+  animation-name:move-your-right-ear;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-your-right-ear{
+  0%{width:50%; right:-50%;}
+  50%{width:47%; right:-47%;}
+  100%{width:50%; right:-50%;}
 }
 
 .ear-left-square-one,
@@ -175,23 +195,44 @@ body{
   background: url("http://features.acumed.net/eps-tool/img/hex/screw-head.png") center/contain no-repeat;
   height:15%;
   width:15%;
+  animation-name: rotation;
+  animation-duration:2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 }
 
 .screw-one{
   top:5%;
   left:5%;
+
 }
 .screw-two{
   bottom:5%;
   left:5%;
+  animation-delay:2s;
 }
 .screw-three{
   top:5%;
   right:5%;
+  animation-delay:4s;
 }
 .screw-four{
   bottom:5%;
   right:5%;
+  animation-delay:6s;
+}
+
+@keyframes rotation {
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg)}
+}
+
+.screw-one:hover,
+.screw-two:hover,
+.screw-three:hover,
+.screw-four:hover {
+  animation-play-state: paused;
 }
 
 /*-------------EYES---------------*/
@@ -217,6 +258,7 @@ body{
   top:5%;
   right:47%;
   background-color: #eee;
+  overflow:hidden;
 }
 
 .right-eye{
@@ -225,7 +267,34 @@ body{
   top:11%;
   left:53%;
   background-color: #eee;
+  overflow:hidden;
 }
+
+.left-eyelid,
+.right-eyelid{
+  position:absolute;
+  height: 0;
+  width:100%;
+  right:0;
+  top:0;
+  border-radius:30%;
+  background: radial-gradient(lightgray, gray);
+  z-index:1;
+  animation-name: close-your-eyelids;
+  animation-duration:8s;
+  animation-delay:5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+
+}
+
+@keyframes close-your-eyelids{
+   0%{height: 0;}
+   30%{height:100%;}
+   60%{height: 0;}
+  100%{height: 0;}
+ }
 
 .pupil-one-left,
 .pupil-one-right{
@@ -292,6 +361,19 @@ body{
   bottom: 6%;
   left: 25%;
   transform: rotate(9deg);
+  animation-name: open;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+@keyframes open{
+  0%{border-bottom: 7px solid black;}
+  20%{border-bottom: 1px solid black;}
+  40%{border-bottom: 15px solid black;}
+  60%{border-bottom: 50px solid black;}
+  100%{border-bottom: 7px solid black;}
 }
 
 /*--------------NECK--------------*/
@@ -314,6 +396,16 @@ body{
   top:10%;
   right: 16%;
   transform:rotate(7deg);
+  animation-name: heartbeat;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes heartbeat{
+  0%{height:50%;}
+  100%{height:49%;}
 }
 
 .left-top,
@@ -328,11 +420,29 @@ body{
 
 .left-top{
   left:10%;
-
+  animation-name: heartbeat-left;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes heartbeat-left{
+  0%{left:10%;}
+  100%{left:11%;}
 }
 
 .right-top{
   right:10%;
+  animation-name: heartbeat-right;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes heartbeat-right{
+  0%{right:10%;}
+  100%{right:11%;}
 }
 
 .middle-bottom{
@@ -372,6 +482,19 @@ body{
 
 .arm-right-container{
   right:5%;
+  z-index:-1;
+  animation-name:move-your-right-arm;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal ;
+  transform-origin: 0 0;
+
+}
+@keyframes move-your-right-arm{
+  0%{transform:rotate(0deg);}
+  50%{transform:rotate(-20deg); width:34%}
+  100%{transform:rotate(0deg);}
 }
 
 .arm-left,
@@ -462,11 +585,34 @@ body{
   border-top: 30px solid darkgray;
   transform:rotate(30deg);
   top:5px;
+  animation-name: move-your-left-finger;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal ;
 }
+
+@keyframes move-your-left-finger{
+  0%{transform:rotate(30deg);}
+  50%{transform:rotate(7deg); top:20%;}
+  100%{transform:rotate(30deg);}
+}
+
 .hand-left .finger-right{
   border-bottom: 30px solid darkgray;
   transform:rotate(-30deg);
   bottom:5px;
+  animation-name: move-your-right-finger;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal ;
+}
+
+@keyframes move-your-right-finger{
+  0%{transform:rotate(-30deg);}
+  50%{transform:rotate(-7deg); bottom:20%;}
+  100%{transform:rotate(-30deg);}
 }
 
 .hand-right .finger-left{
